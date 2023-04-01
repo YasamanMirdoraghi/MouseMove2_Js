@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        section{
+            background-color: black;
+            position: relative;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+        h2{
+            color: white;
+            cursor: default;
+            font-size: 9em;
+        }
+        .box{
+            position: fixed;
+            top: 0;left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            background:radial-gradient(circle at var(--D) var(--S), transparent 10%, rgba(0,0,0,0.95) 20%);
+        }
+        </style>
+</head>
+<body>
+    <section>
+        <h2>WEB DESIGNER</h2>
+    </section>
+    <div class="box"></div>
+</body>
+
+
+<script>
+  let pos =  document.documentElement;
+  pos.addEventListener('mousemove', e => {
+    pos.style.setProperty('--D', e.clientX + 'px')
+    pos.style.setProperty('--S', e.clientY + 'px')
+    // console.log(pos);
+// moteghaer css
+  })
+</script>
+</html>
